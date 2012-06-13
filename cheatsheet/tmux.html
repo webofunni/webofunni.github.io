@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Tmux cheat Sheet</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<h1 id="cheatsheetfortmux">Cheat sheet for TMUX</h1>
+
+<p>Start New : </p>
+
+<p><code>tmux</code></p>
+
+<p>Start New with session name :</p>
+
+<p><code>tmux new -s myname</code></p>
+
+<p>attach:</p>
+
+<p><code>tmux a  #  (or at, or attach)</code></p>
+
+<p>attach to named:</p>
+
+<p><code>tmux a -t myname</code></p>
+
+<p>list sessions:</p>
+
+<p><code>tmux ls</code></p>
+
+<p>kill session:</p>
+
+<p><code>tmux kill-session -t myname</code></p>
+
+<p>Kill all the tmux sessions:</p>
+
+<p><code>tmux ls | grep : | cut -d. -f1 | awk '{print substr($1, 0, length($1)-1)}' | xargs kill</code></p>
+
+<p>In tmux, hit the prefix ctrl+b (my modified prefix is ctrl+a) and then: </p>
+
+<h1 id="sessions">Sessions</h1>
+
+<pre><code>s  list sessions
+$  name session
+</code></pre>
+
+<h1 id="windowstabs">Windows (tabs)</h1>
+
+<pre><code>c  create window
+w  list windows
+n  next window
+p  previous window
+f  find window
+,  name window
+&amp;  kill window
+</code></pre>
+
+<h1 id="panessplits">Panes (splits)</h1>
+
+<pre><code>%  vertical split
+&quot;  horizontal split
+
+o  swap panes
+q  show pane numbers
+x  kill pane
++  break pane into window (e.g. to select text by mouse to copy)
+-  restore pane from window
+⍽  space - toggle between layouts
+&lt;prefix&gt; q (Show pane numbers, when the numbers show up type the key to goto that pane)
+&lt;prefix&gt; { (Move the current pane left)
+&lt;prefix&gt; } (Move the current pane right)
+&lt;prefix&gt; z toggle pane zoom
+</code></pre>
+
+</body>
+</html>
