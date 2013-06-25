@@ -1,0 +1,36 @@
+div {
+    	width:60%;height:60%;left:20%;top:20%;position:absolute;
+    }
+.me {
+    	border:2px solid #ffffff;
+    	background:#dddddd;
+    	border-radius: 50%;
+    }
+p   {
+    	margin: 60px auto 0px;
+    	font-size: 1.5em;
+    	font-weight: 300;
+    	width: 100%;
+    	text-align: center;
+    	color: #EB9100;
+    }
+body{
+    	text-align:center;
+    	background: url("wood.jpg") repeat fixed 0% 0% rgb(33, 35, 34);
+	font-family: 'Lily Script One', cursive;
+    }
+.footer {
+		color : white;
+		text-decoration : none;
+	}
+a  {
+	text-decoration : none;
+	color : #EB9100;
+   }
+a:hover {
+		color : yellow;
+	}
+nav	{
+		padding-top : 15px;
+		font-size : 20px;
+	}
