@@ -22,6 +22,8 @@ body{
 .footer {
 		color : white;
 		text-decoration : none;
+		padding-top : 50px;
+		font: 1em/1.5 Georgia, serif;
 	}
 a  {
 	text-decoration : none;
