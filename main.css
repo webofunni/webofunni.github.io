@@ -1,5 +1,5 @@
-div {
-    	width:60%;height:60%;left:20%;top:20%;position:absolute;
+div.main {
+    	width:60%;height:60%;left:20%;top:18%;position:absolute;
     }
 .me {
     	border:2px solid #ffffff;
@@ -7,7 +7,7 @@ div {
     	border-radius: 50%;
     }
 p   {
-    	margin: 60px auto 0px;
+    	margin: 20px auto 0px;
     	font-size: 1.5em;
     	font-weight: 300;
     	width: 100%;
@@ -33,6 +33,19 @@ a:hover {
 		color : yellow;
 	}
 nav	{
-		padding-top : 15px;
+		padding-top : 20px;
 		font-size : 20px;
+		padding-bottom : 20px;
 	}
+ul	{
+		color : yellow;
+	}
+.icon-set {
+		margin : 5px;
+	  }
+div.social-links {
+		border-top: 1px solid rgba(0, 0, 0, 0.5);
+		border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+		box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.1) inset, 0px 1px 0px 0px rgba(255, 255, 255, 0.1);
+		margin : 10px;
+}
