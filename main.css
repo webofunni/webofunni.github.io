@@ -1,55 +1,76 @@
-div.main {
-    	width:60%;height:60%;left:20%;top:18%;position:absolute;
-    }
-.me {
-    	border:2px solid #ffffff;
-    	background:#dddddd;
-    	border-radius: 50%;
-    }
-p   {
-    	margin: 20px auto 0px;
-    	font-size: 1.5em;
-    	font-weight: 300;
-    	width: 100%;
-    	text-align: center;
-    	color: #EB9100;
-    }
-body{
-    	text-align:center;
-    	background: url("wood.jpg") repeat fixed 0% 0% rgb(33, 35, 34);
-	font-family: 'Lily Script One', cursive;
-    }
-.footer {
-		color : white;
-		text-decoration : none;
-		padding-top : 50px;
-		font: 1em/1.5 Georgia, serif;
-	}
-a  {
-	text-decoration : none;
-	color : #EB9100;
-   }
-a:hover {
-		color : yellow;
-           -webkit-transition:color 0.4s ease-in;
-   -moz-transition:color 0.4s ease-in;
-   -o-transition:color 0.4s ease-in;
-   transition:color 0.4s ease-in;
-	}
-nav	{
-		padding-top : 20px;
-		font-size : 20px;
-		padding-bottom : 20px;
-	}
-ul	{
-		color : yellow;
-	}
-.icon-set {
-		margin : 5px;
-	  }
+div.main	{
+    			width:60%;height:60%;left:20%;top:18%;position:absolute;
+    		}
+.me 		{
+    			border:2px solid #ffffff;
+    			background:#dddddd;
+    			border-radius: 50%;
+    		}
+p   		{			
+    			margin: 20px auto 0px;
+    			font-size: 1.5em;
+    			font-weight: 300;
+    			width: 100%;
+    			text-align: center;
+    			color: #EB9100;
+    		}
+body		{
+    			text-align:center;
+    			background: url("wood.jpg") repeat fixed 0% 0% rgb(33, 35, 34);
+			font-family: 'Lily Script One', cursive;
+    		}
+.footer 	{
+			color : white;
+			text-decoration : none;
+			padding-top : 50px;
+			font: 1em/1.5 Georgia, serif;
+		}
+a  		{
+			text-decoration : none;
+			color : #797373;
+   		}
+/*a:hover 	{
+			color : yellow;
+           		-webkit-transition:color 0.4s ease-in;
+   		        -moz-transition:color 0.4s ease-in;
+   			-o-transition:color 0.4s ease-in;
+   			transition:color 0.4s ease-in;
+		}*/
+nav		{
+			padding-top : 20px;
+			font-size : 20px;
+			padding-bottom : 20px;
+		}
+ul		{
+			color : yellow;
+		}
+.icon-set-blog 	{
+			margin : 5px;
+	  	}
+.icon-set-blog:hover {
+				color : #d9710c;
+			}
+.icon-set-twitter {
+			margin : 5px;
+		}
+.icon-set-twitter:hover {
+				color : #0084b4;
+			}
+.icon-set-gplus {	
+			margin : 5px;
+		}
+.icon-set-gplus:hover {
+				color : #D64335;
+		      }
+.icon-set-github {
+			margin : 5px;
+		 }
+.icon-set-github:hover {
+				color : #a09891;
+			}
 div.social-links {
-		border-top: 1px solid rgba(0, 0, 0, 0.5);
-		border-bottom: 1px solid rgba(0, 0, 0, 0.5);
-		box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.1) inset, 0px 1px 0px 0px rgba(255, 255, 255, 0.1);
-		margin : 10px;
-}
+			border-top: 1px solid rgba(0, 0, 0, 0.5);
+			border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+			box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.1) inset, 0px 1px 0px 0px rgba(255, 255, 255, 0.1);
+			margin : 10px;
+		}
