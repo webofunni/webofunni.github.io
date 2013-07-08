@@ -16,7 +16,7 @@ p   		{
     		}
 body		{
     			text-align:center;
-    			background: url("wood.jpg") repeat fixed 0% 0% rgb(33, 35, 34);
+    			background: url("img/wood.jpg") repeat fixed 0% 0% rgb(33, 35, 34);
 			font-family: 'Lily Script One', cursive;
     		}
 .footer 	{
