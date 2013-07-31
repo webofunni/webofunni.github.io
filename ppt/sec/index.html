@@ -57,9 +57,22 @@
 				
 			</div>
 			<div id="/section-1/page-4" class="ft-page" data-id="page-4">
+			<h1>User/group permissions and security</h1>
+			<p>Give minimum permission required for files/folders in nix system</p>
+			<p>chmod 777 is not the best solution for permission issues</p>			
+</div>
+			<div id="/section-1/page-5" class="ft-page" data-id="page-5">
 				<h1>Centralized login using PAM</h1>
 				<p>Pluggable authentication module</p>
 				<p>Provides API for application to handle authentication, session management, accounting etc</p>
+				<p>example PAM conf : reboot</p>
+				<pre>root@host [~]# cat /etc/pam.d/reboot 
+#%PAM-1.0
+auth       sufficient   pam_rootok.so
+auth       required     pam_console.so
+#auth       include     system-auth
+account    required     pam_permit.so
+</pre>
 			</div>
 			<div id="/section-1/page-5" class="ft-page" data-id="page-5">
 				<h1>Page 5</h1>
