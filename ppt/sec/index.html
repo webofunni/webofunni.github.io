@@ -74,9 +74,21 @@ auth       required     pam_console.so
 account    required     pam_permit.so
 </pre>
 			</div>
-			<div id="/section-1/page-5" class="ft-page" data-id="page-5">
-				<h1>Page 5</h1>
+			<div id="/section-1/page-6" class="ft-page" data-id="page-6">
+				<h1>Chrooting services and users</h1>
+				<p>Chrooting services and users provides isolation and security</p>
+				<p>Hosting team uses CloudLinux, lve and cagefs to achieve user/process isolation</p>
 			</div>
+			<div id="/section-1/page-6" class="ft-page" data-id="page-6">
+			
+			<h1>Less access/Less provilege = More security</h1>
+			<h2>Less access</h2>
+			<p>Restrict SSH access to limited number of IPs</p>
+			<p>Open only ncessery ports in firewall</p>
+			<p>Block ips if there are many login failure attempts</p>
+			<h2>Less privilege</h2>
+			<p>sudo is better than root</p>
+</div>
 	
 	<script src="js/brav1toolbox.js"></script>
 	<script src="js/flowtime.js"></script>
