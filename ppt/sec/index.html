@@ -143,11 +143,11 @@
 <h1><strong>PAM configuration example</strong></h1>
 <pre class="language-markup">
 <code class="language-markup">
-module-type, control-flag and module-filename
 root@host [~]# cat /etc/pam.d/reboot | grep -v ^#
-auth       sufficient   pam_rootok.so
-auth       required     pam_console.so
-account    required     pam_permit.so
+module-type control-flag module-filename
+auth        sufficient   pam_rootok.so
+auth        required     pam_console.so
+account     required     pam_permit.so
 root@host [~]# ls -l /etc/security/console.apps/reboot 
 -rw-r--r--. 1 root root 14 Aug 22  2010 /etc/security/console.apps/reboot
 root@host [~]# 
