@@ -138,6 +138,21 @@
 <div id="/section-2/page-7" class="ft-page" data-id="page-27">
 <h1><strong>PAM architecture</strong></h1>
 <img src="pam.overview.1.png" />
+</div>
+<div id="/section-2/page-8" class="ft-page" data-id="page-28">
+<h1><strong>PAM configuration example</strong></h1>
+<pre class="language-markup">
+<code class="language-markup">
+module-type, control-flag and module-filename
+root@host [~]# cat /etc/pam.d/reboot | grep -v ^#
+auth       sufficient   pam_rootok.so
+auth       required     pam_console.so
+account    required     pam_permit.so
+root@host [~]# ls -l /etc/security/console.apps/reboot 
+-rw-r--r--. 1 root root 14 Aug 22  2010 /etc/security/console.apps/reboot
+root@host [~]# 
+</code>
+</pre>
 </div>	
 </div>
 <div class="ft-section" data-id="section-3">
