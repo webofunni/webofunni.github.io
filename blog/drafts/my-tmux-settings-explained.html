@@ -36,6 +36,16 @@
       Written on <span class="published" title="2014-09-03T00:00:00">Wed 03 September 2014</span>
     </div>
     <div class="articleContent">
+      <p>I am using tmux for almost 2 years now. I was using and a big fan of screen before that. But screen was replaced by tmux from the moment one of my colleages introduced me to a more actively deleoped tmux.</p>
+<p>Here I am documenting my Tmux configuration. Full configuration file is stored at <a href="https://github.com/webofunni/dotfiles/blob/master/tmux/tmux.conf">Github</a></p>
+<div class="codehilite"><pre>#Use screen key combination
+unbind C-b
+set -g prefix C-a
+bind C-a send-prefix
+</pre></div>
+
+
+<p>Above settings will replace defualt prefix for tmux from Ctrl+b or CMD+b to Ctrl+a or CMD+a. It also binds Ctrl+a+Ctrl+a or CMD+a+CMD+a to send prefix to multiplexer running under tmux such as screen.</p>
 	<p>
 	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- mutexes blog -->
@@ -47,16 +57,6 @@
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script>
 	</p>
-      <p>I am using tmux for almost 2 years now. I was using and a big fan of screen before that. But screen was replaced by tmux from the moment one of my colleages introduced me to a more actively deleoped tmux.</p>
-<p>Here I am documenting my Tmux configuration. Full configuration file is stored at <a href="https://github.com/webofunni/dotfiles/blob/master/tmux/tmux.conf">Github</a></p>
-<div class="codehilite"><pre>#Use screen key combination
-unbind C-b
-set -g prefix C-a
-bind C-a send-prefix
-</pre></div>
-
-
-<p>Above settings will replace defualt prefix for tmux from Ctrl+b or CMD+b to Ctrl+a or CMD+a. It also binds Ctrl+a+Ctrl+a or CMD+a+CMD+a to send prefix to multiplexer running under tmux such as screen.</p>
     </div>
   </section>
   <div class="articleEnd">---</div>
