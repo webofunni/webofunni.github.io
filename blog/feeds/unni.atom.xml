@@ -8,20 +8,20 @@ bind C-a send-prefix
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;Above settings will replace default prefix for tmux from Ctrl+b or CMD+b to Ctrl+a or CMD+a. It also binds Ctrl+a+Ctrl+a or CMD+a+CMD+a to send prefix to multiplexer running under tmux such as screen.&lt;/p&gt;
+&lt;p&gt;Above settings will replace default prefix for tmux from &lt;code&gt;Ctrl+b&lt;/code&gt; or &lt;code&gt;CMD+b&lt;/code&gt; to &lt;code&gt;Ctrl+a&lt;/code&gt; or &lt;code&gt;CMD+a&lt;/code&gt;. It also binds &lt;code&gt;Ctrl+a+Ctrl+a&lt;/code&gt; or &lt;code&gt;CMD+a+CMD+a&lt;/code&gt; to send prefix to multiplexer running under tmux such as screen.&lt;/p&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;#Some easy key combination to Split window
 bind | split-window -h
 bind - split-window -v
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;Now its time to change the keyboard short cut to Prefix + | for vertical split and Prefix + - for horizontal split.&lt;/p&gt;
+&lt;p&gt;Now its time to change the keyboard short cut to &lt;code&gt;Prefix + |&lt;/code&gt; for vertical split and &lt;code&gt;Prefix + -&lt;/code&gt; for horizontal split.&lt;/p&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;#Easily reload configuration
 bind r source-file ~/.tmux.conf \; display &amp;quot;Reloaded!!!&amp;quot;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;Easily reload the configuration file using Prefix+r&lt;/p&gt;
+&lt;p&gt;Easily reload the configuration file using &lt;code&gt;Prefix+r&lt;/code&gt;&lt;/p&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;#Change starting window index to 1 from 0
 set -g base-index 1
 

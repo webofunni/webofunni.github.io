@@ -45,20 +45,20 @@ bind C-a send-prefix
 </pre></div>
 
 
-<p>Above settings will replace default prefix for tmux from Ctrl+b or CMD+b to Ctrl+a or CMD+a. It also binds Ctrl+a+Ctrl+a or CMD+a+CMD+a to send prefix to multiplexer running under tmux such as screen.</p>
+<p>Above settings will replace default prefix for tmux from <code>Ctrl+b</code> or <code>CMD+b</code> to <code>Ctrl+a</code> or <code>CMD+a</code>. It also binds <code>Ctrl+a+Ctrl+a</code> or <code>CMD+a+CMD+a</code> to send prefix to multiplexer running under tmux such as screen.</p>
 <div class="codehilite"><pre>#Some easy key combination to Split window
 bind | split-window -h
 bind - split-window -v
 </pre></div>
 
 
-<p>Now its time to change the keyboard short cut to Prefix + | for vertical split and Prefix + - for horizontal split.</p>
+<p>Now its time to change the keyboard short cut to <code>Prefix + |</code> for vertical split and <code>Prefix + -</code> for horizontal split.</p>
 <div class="codehilite"><pre>#Easily reload configuration
 bind r source-file ~/.tmux.conf \; display &quot;Reloaded!!!&quot;
 </pre></div>
 
 
-<p>Easily reload the configuration file using Prefix+r</p>
+<p>Easily reload the configuration file using <code>Prefix+r</code></p>
 <div class="codehilite"><pre>#Change starting window index to 1 from 0
 set -g base-index 1
 
