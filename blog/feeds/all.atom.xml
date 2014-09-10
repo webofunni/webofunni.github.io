@@ -1,3 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Mutexes Blog</title><link href="http://www.mutexes.org/blog/" rel="alternate"></link><link href="http://www.mutexes.org/blog/feeds/all.atom.xml" rel="self"></link><id>http://www.mutexes.org/blog/</id><updated>2013-12-23T00:00:00+05:30</updated><entry><title>Moving blog to Pelican from Wordpress</title><link href="http://www.mutexes.org/blog/moving-blog-to-pelican-from-wordpress.html" rel="alternate"></link><updated>2013-12-23T00:00:00+05:30</updated><author><name>Unni</name></author><id>tag:www.mutexes.org,2013-12-23:blog/moving-blog-to-pelican-from-wordpress.html</id><summary type="html">&lt;p&gt;I was thinking of moving my blog from resource hungry PHP-Wordpress to a more simple html/css based setup for long time. I've tried many things like Octopress and decided to stick with Pelican. Mainly because I am confirtable with Python than other languages like Ruby. I've tested other things in Python like Django and decided to go with Pellican because it is simple and easy to setup.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Mutexes Blog</title><link href="http://www.mutexes.org/blog/" rel="alternate"></link><link href="http://www.mutexes.org/blog/feeds/all.atom.xml" rel="self"></link><id>http://www.mutexes.org/blog/</id><updated>2014-09-03T00:00:00+05:30</updated><entry><title>My tmux settings explained</title><link href="http://www.mutexes.org/blog/my-tmux-settings-explained.html" rel="alternate"></link><updated>2014-09-03T00:00:00+05:30</updated><author><name>Unni</name></author><id>tag:www.mutexes.org,2014-09-03:blog/my-tmux-settings-explained.html</id><summary type="html">&lt;p&gt;I am using tmux for almost 2 years now. I was using and was a big fan of screen before that. But screen was replaced by tmux from the moment one of my colleague introduced me to a more actively developed tmux.&lt;/p&gt;
+&lt;p&gt;Here I am documenting my Tmux configuration. Full configuration file is stored at &lt;a href="https://github.com/webofunni/dotfiles/blob/master/tmux/tmux.conf"&gt;Github&lt;/a&gt;&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;#Use screen key combination
+unbind C-b
+set -g prefix C-a
+bind C-a send-prefix
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Above settings will replace default prefix for tmux from Ctrl+b or CMD+b to Ctrl+a or CMD+a. It also binds Ctrl+a+Ctrl+a or CMD+a+CMD+a to send prefix to multiplexer running under tmux such as screen.&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;#Some easy key combination to Split window
+bind | split-window -h
+bind - split-window -v
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Now its time to change the keyboard short cut to Prefix + | for vertical split and Prefix + - for horizontal split.&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;#Easily reload configuration
+bind r source-file ~/.tmux.conf \; display &amp;quot;Reloaded!!!&amp;quot;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Easily reload the configuration file using Prefix+r&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;#Change starting window index to 1 from 0
+set -g base-index 1
+
+#Monitor activity in windows
+setw -g monitor-activity on 
+set -g visual-activity on
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Change the window index from 0 to 1 and keep monitor activity on each window.&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;# status bar colors
+set -g status-fg white 
+set -g status-bg black
+
+set -g status-left-length 40
+set -g status-left &amp;quot;#[fg=green][#[fg=yellow]#S #[bg=black,fg=cyan]Win: #[fg=yellow]#I #[fg=cyan]Pane: #[fg=yellow]#P#[fg=green]]&amp;quot;
+
+set -g status-right &amp;quot;#[fg=green][#[fg=cyan]%d %b %R#[fg=green]]&amp;quot;
+
+## window list options
+setw -g window-status-fg cyan 
+setw -g window-status-bg default 
+setw -g window-status-attr dim
+setw -g window-status-current-fg white 
+setw -g window-status-current-bg red
+setw -g window-status-current-attr bright
+setw -g automatic-rename on
+set-window-option -g window-status-format &amp;#39;#[fg=green][#[fg=cyan,dim]#I#[fg=blue]:#[default]#W#[fg=grey,dim]#F#[fg=green]]&amp;#39;
+set-window-option -g window-status-current-format &amp;#39;#[bg=red,fg=cyan,bold][#I#[bg=red,fg=cyan]:#[fg=colour230]#W#[fg=dim]#F#[bg=red,fg=cyan]]&amp;#39;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Above settings will format the status bar at bottom. Below screenshot shows the left side of statusbar.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Alt text" src="/theme/images/tmux-left.png" /&gt;&lt;/p&gt;
+&lt;p&gt;Above status bar is from a tmux session with name dev. &lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;tmux new -s dev
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;As you can see left side of status bar shows tmux session name, number of windows, number of panes and window list. You can see that window index start from 1 instead of default zero and active window background is red.&lt;/p&gt;
+&lt;p&gt;Right side of the statusbar is set to show the the date. &lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;set -g status-right &amp;quot;#[fg=green][#[fg=cyan]%d %b %R#[fg=green]]&amp;quot;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Result will look like : &lt;/p&gt;
+&lt;p&gt;&lt;img alt="Alt status bar right" src="/theme/images/tmux-right.png" /&gt;&lt;/p&gt;
+&lt;p&gt;Thats all about my Tmux settings :)&lt;/p&gt;</summary><category term="tmux"></category><category term="dotfiles"></category></entry><entry><title>Moving blog to Pelican from Wordpress</title><link href="http://www.mutexes.org/blog/moving-blog-to-pelican-from-wordpress.html" rel="alternate"></link><updated>2013-12-23T00:00:00+05:30</updated><author><name>Unni</name></author><id>tag:www.mutexes.org,2013-12-23:blog/moving-blog-to-pelican-from-wordpress.html</id><summary type="html">&lt;p&gt;I was thinking of moving my blog from resource hungry PHP-Wordpress to a more simple html/css based setup for long time. I've tried many things like Octopress and decided to stick with Pelican. Mainly because I am confirtable with Python than other languages like Ruby. I've tested other things in Python like Django and decided to go with Pellican because it is simple and easy to setup.&lt;/p&gt;
 &lt;p&gt;So here I am running Pellican based blog on github. I am geting free top class hosting too :).&lt;/p&gt;</summary><category term="pelican"></category></entry></feed>

@@ -36,7 +36,7 @@
       Written on <span class="published" title="2014-09-03T00:00:00">Wed 03 September 2014</span>
     </div>
     <div class="articleContent">
-      <p>I am using tmux for almost 2 years now. I was using and a big fan of screen before that. But screen was replaced by tmux from the moment one of my colleages introduced me to a more actively deleoped tmux.</p>
+      <p>I am using tmux for almost 2 years now. I was using and was a big fan of screen before that. But screen was replaced by tmux from the moment one of my colleague introduced me to a more actively developed tmux.</p>
 <p>Here I am documenting my Tmux configuration. Full configuration file is stored at <a href="https://github.com/webofunni/dotfiles/blob/master/tmux/tmux.conf">Github</a></p>
 <div class="codehilite"><pre>#Use screen key combination
 unbind C-b
@@ -45,7 +45,68 @@ bind C-a send-prefix
 </pre></div>
 
 
-<p>Above settings will replace defualt prefix for tmux from Ctrl+b or CMD+b to Ctrl+a or CMD+a. It also binds Ctrl+a+Ctrl+a or CMD+a+CMD+a to send prefix to multiplexer running under tmux such as screen.</p>
+<p>Above settings will replace default prefix for tmux from Ctrl+b or CMD+b to Ctrl+a or CMD+a. It also binds Ctrl+a+Ctrl+a or CMD+a+CMD+a to send prefix to multiplexer running under tmux such as screen.</p>
+<div class="codehilite"><pre>#Some easy key combination to Split window
+bind | split-window -h
+bind - split-window -v
+</pre></div>
+
+
+<p>Now its time to change the keyboard short cut to Prefix + | for vertical split and Prefix + - for horizontal split.</p>
+<div class="codehilite"><pre>#Easily reload configuration
+bind r source-file ~/.tmux.conf \; display &quot;Reloaded!!!&quot;
+</pre></div>
+
+
+<p>Easily reload the configuration file using Prefix+r</p>
+<div class="codehilite"><pre>#Change starting window index to 1 from 0
+set -g base-index 1
+
+#Monitor activity in windows
+setw -g monitor-activity on 
+set -g visual-activity on
+</pre></div>
+
+
+<p>Change the window index from 0 to 1 and keep monitor activity on each window.</p>
+<div class="codehilite"><pre># status bar colors
+set -g status-fg white 
+set -g status-bg black
+
+set -g status-left-length 40
+set -g status-left &quot;#[fg=green][#[fg=yellow]#S #[bg=black,fg=cyan]Win: #[fg=yellow]#I #[fg=cyan]Pane: #[fg=yellow]#P#[fg=green]]&quot;
+
+set -g status-right &quot;#[fg=green][#[fg=cyan]%d %b %R#[fg=green]]&quot;
+
+## window list options
+setw -g window-status-fg cyan 
+setw -g window-status-bg default 
+setw -g window-status-attr dim
+setw -g window-status-current-fg white 
+setw -g window-status-current-bg red
+setw -g window-status-current-attr bright
+setw -g automatic-rename on
+set-window-option -g window-status-format &#39;#[fg=green][#[fg=cyan,dim]#I#[fg=blue]:#[default]#W#[fg=grey,dim]#F#[fg=green]]&#39;
+set-window-option -g window-status-current-format &#39;#[bg=red,fg=cyan,bold][#I#[bg=red,fg=cyan]:#[fg=colour230]#W#[fg=dim]#F#[bg=red,fg=cyan]]&#39;
+</pre></div>
+
+
+<p>Above settings will format the status bar at bottom. Below screenshot shows the left side of statusbar.</p>
+<p><img alt="Alt text" src="/theme/images/tmux-left.png" /></p>
+<p>Above status bar is from a tmux session with name dev. </p>
+<div class="codehilite"><pre>tmux new -s dev
+</pre></div>
+
+
+<p>As you can see left side of status bar shows tmux session name, number of windows, number of panes and window list. You can see that window index start from 1 instead of default zero and active window background is red.</p>
+<p>Right side of the statusbar is set to show the the date. </p>
+<div class="codehilite"><pre>set -g status-right &quot;#[fg=green][#[fg=cyan]%d %b %R#[fg=green]]&quot;
+</pre></div>
+
+
+<p>Result will look like : </p>
+<p><img alt="Alt status bar right" src="/theme/images/tmux-right.png" /></p>
+<p>Thats all about my Tmux settings :)</p>
 	<p>
 	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- mutexes blog -->
