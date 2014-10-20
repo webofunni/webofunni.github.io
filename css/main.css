@@ -1,3 +1,10 @@
+html 		{
+			background-color: #3a92c8;
+			background: radial-gradient(circle,#6bb1db,#3a92c8);
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+		}
+
 div.main	{
     			width:60%;height:60%;left:20%;top:18%;position:absolute;
     		}
@@ -16,7 +23,7 @@ p   		{
     		}
 body		{
     			text-align:center;
-    			background: url("../img/wood.jpg") repeat fixed 0% 0% rgb(33, 35, 34);
+/*   			background: url("../img/wood.jpg") repeat fixed 0% 0% rgb(33, 35, 34); */
 			font-family: 'Lily Script One', cursive;
     		}
 .footer 	{
