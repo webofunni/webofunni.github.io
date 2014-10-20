@@ -1,15 +1,8 @@
-html 		{
-			background-color: #3a92c8;
-			background: radial-gradient(circle,#6bb1db,#3a92c8);
-			background-repeat: no-repeat;
-			background-attachment: fixed;
-		}
-
 div.main	{
     			width:60%;height:60%;left:20%;top:18%;position:absolute;
     		}
 .me 		{
-    			border:5px solid #ffffff;
+    			border:2px solid #ffffff;
     			background:#dddddd;
     			border-radius: 50%;
     		}
@@ -23,7 +16,7 @@ p   		{
     		}
 body		{
     			text-align:center;
-/*   			background: url("../img/wood.jpg") repeat fixed 0% 0% rgb(33, 35, 34); */
+    			background: url("../img/wood.jpg") repeat fixed 0% 0% rgb(33, 35, 34);
 			font-family: 'Lily Script One', cursive;
     		}
 .footer 	{
@@ -53,21 +46,18 @@ ul		{
 		}
 .icon-set-blog 	{
 			margin : 5px;
-			color : #ffffff;
 	  	}
 .icon-set-blog:hover {
 				color : #d9710c;
 			}
 .icon-set-twitter {
 			margin : 5px;
-			color : #ffffff;
 		}
 .icon-set-twitter:hover {
 				color : #0084b4;
 			}
 .icon-set-gplus {	
 			margin : 5px;
-			color : #ffffff;
 		}
 .icon-set-gplus:hover {
 				color : #D64335;
