@@ -5,3 +5,10 @@
         font-size: 13px;
         }
 }
+
+@media (max-width: 830px)
+{
+        nav {
+        font-size: 9px;
+        }
+}
