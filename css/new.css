@@ -1,12 +1,13 @@
-        .bigEntrance{
-            animation-name: bigEntrance;
-            -webkit-animation-name: bigEntrance;
-            animation-duration: 1.6s;
-            -webkit-animation-duration: 1.6s;
-            animation-timing-function: ease-out;
-            -webkit-animation-timing-function: ease-out;
-            visibility: visible !important;
-        }
+.bigEntrance
+{
+	animation-name: bigEntrance;
+	-webkit-animation-name: bigEntrance;
+	animation-duration: 1.6s;
+	-webkit-animation-duration: 1.6s;
+	animation-timing-function: ease-out;
+	-webkit-animation-timing-function: ease-out;
+	visibility: visible !important;
+}
         @keyframes bigEntrance {
         0% {
             transform: scale(0.3) rotate(6deg) translateX(-30%) translateY(30%);
@@ -69,7 +70,7 @@
 }
 body {
     margin-top: 100px;
-    font-family: Tahoma;
+    font: Lustria,Georgia;
 }
 .banner {
     background-color: #fe5652;
