@@ -81,7 +81,8 @@ body
     border-radius: 24px;
     color: #ffffff;
     font-weight: normal; 
-    font-size: 68px;
+/*    font-size: 68px; */
+    font-size: 4.25em;
     padding: 10px;
     text-align: center;
     margin-left: auto;
@@ -103,7 +104,8 @@ body
 .message {
     display: block;
     margin-top: 20px;
-    font-size: 10px;
+/*    font-size: 10px;*/
+    font-size: 0.625em;
     text-align: center;
     color: #5E412F;
     text-transform: uppercase;
@@ -123,7 +125,8 @@ margin: 70px;
 nav {
 text-align: center;
 padding-top: 20px;
-font-size: 20px;
+/*font-size: 20px;*/
+font-size: 1.25em;
 padding-bottom: 20px;
 text-transform: uppercase;
 letter-spacing: .35em;
