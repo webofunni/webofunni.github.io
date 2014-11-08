@@ -72,7 +72,8 @@
 body
 {
 	margin-top: 100px;
-	font-family: 'Lustria', serif;
+	font: normal 100% 'Lustria', serif;
+/*	font-family: 'Lustria', serif; */
 }
 
 .banner {
