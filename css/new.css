@@ -154,15 +154,22 @@ color: #5E412F;
 
 @media (max-width: 830px)
 {
-        nav {
+    nav {
         font-size: 9px;
         }
+            div.banner{
+        font-size: 38px;
+        }
+        div.message{
+        font-size: 5px;
+        }
 }
+
 @media (max-width: 690px)
 {
-        nav {
+    nav {
         font-size: 6px;
-        }
+    }
 	div.banner{
 	font-size: 20px;
 	}
