@@ -38,81 +38,75 @@
   <p>I am using tmux for almost 2 years now. I was using and was a big fan of screen before that. But screen was replaced by tmux from the moment one of my colleague introduced me to a more actively developed tmux.</p>
 
 <p>Here I am documenting my Tmux configuration. Full configuration file is stored at <a href="https://github.com/webofunni/dotfiles/blob/master/tmux/tmux.conf">Github</a></p>
-
-<pre><code>::text
-#Use screen key combination
-unbind C-b
-set -g prefix C-a
-bind C-a send-prefix
-</code></pre>
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span style="color: #f92672">::</span><span style="color: #f8f8f2">text</span>
+<span style="color: #75715e">#Use screen key combination</span>
+<span style="color: #f8f8f2">unbind</span> <span style="color: #f8f8f2">C</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">b</span>
+<span style="color: #f8f8f2">set</span> <span style="color: #f92672">-</span><span style="color: #f8f8f2">g</span> <span style="color: #f8f8f2">prefix</span> <span style="color: #f8f8f2">C</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">a</span>
+<span style="color: #f8f8f2">bind</span> <span style="color: #f8f8f2">C</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">a</span> <span style="color: #f8f8f2">send</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">prefix</span>
+</pre></div>
 
 <p>Above settings will replace default prefix for tmux from <code>Ctrl+b</code> or <code>CMD+b</code> to <code>Ctrl+a</code> or <code>CMD+a</code>. It also binds <code>Ctrl+a+Ctrl+a</code> or <code>CMD+a+CMD+a</code> to send prefix to multiplexer running under tmux such as screen.</p>
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span style="color: #960050; background-color: #1e0010">```</span><span style="color: #f8f8f2">text</span>
+<span style="color: #75715e">#Some easy key combination to Split window</span>
+<span style="color: #f8f8f2">bind</span> <span style="color: #f92672">|</span> <span style="color: #f8f8f2">split</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">window</span> <span style="color: #f92672">-</span><span style="color: #f8f8f2">h</span>
+<span style="color: #f8f8f2">bind</span> <span style="color: #f92672">-</span> <span style="color: #f8f8f2">split</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">window</span> <span style="color: #f92672">-</span><span style="color: #f8f8f2">v</span>
+</pre></div>
 
-<pre><code>::text
-#Some easy key combination to Split window
-bind | split-window -h
-bind - split-window -v
-</code></pre>
-
-<p>Now its time to change the keyboard short cut to <code>Prefix + |</code> for vertical split and <code>Prefix + -</code> for horizontal split.</p>
-
-<pre><code>::text
-#Easily reload configuration
-bind r source-file ~/.tmux.conf \; display &quot;Reloaded!!!&quot;
-</code></pre>
+<p>``<code>
+Now its time to change the keyboard short cut to</code>Prefix + |<code>for vertical split and</code>Prefix + -` for horizontal split.</p>
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span style="color: #f92672">::</span><span style="color: #f8f8f2">text</span>
+<span style="color: #75715e">#Easily reload configuration</span>
+<span style="color: #f8f8f2">bind</span> <span style="color: #f8f8f2">r</span> <span style="color: #f8f8f2">source</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">file</span> <span style="color: #f92672">~/</span><span style="color: #f8f8f2">.tmux.conf</span> <span style="color: #960050; background-color: #1e0010">\</span><span style="color: #f8f8f2">;</span> <span style="color: #f8f8f2">display</span> <span style="color: #e6db74">&quot;Reloaded!!!&quot;</span>
+</pre></div>
 
 <p>Easily reload the configuration file using <code>Prefix+r</code></p>
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span style="color: #f92672">::</span><span style="color: #f8f8f2">text</span>
+<span style="color: #75715e">#Change starting window index to 1 from 0</span>
+<span style="color: #f8f8f2">set</span> <span style="color: #f92672">-</span><span style="color: #f8f8f2">g</span> <span style="color: #f8f8f2">base</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">index</span> <span style="color: #ae81ff">1</span>
 
-<pre><code>::text
-#Change starting window index to 1 from 0
-set -g base-index 1
-
-#Monitor activity in windows
-setw -g monitor-activity on 
-set -g visual-activity on
-</code></pre>
+<span style="color: #75715e">#Monitor activity in windows</span>
+<span style="color: #f8f8f2">setw</span> <span style="color: #f92672">-</span><span style="color: #f8f8f2">g</span> <span style="color: #f8f8f2">monitor</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">activity</span> <span style="color: #f8f8f2">on</span> 
+<span style="color: #f8f8f2">set</span> <span style="color: #f92672">-</span><span style="color: #f8f8f2">g</span> <span style="color: #f8f8f2">visual</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">activity</span> <span style="color: #f8f8f2">on</span>
+</pre></div>
 
 <p>Change the window index from 0 to 1 and keep monitor activity on each window.</p>
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span style="color: #f92672">::</span><span style="color: #f8f8f2">text</span>
+<span style="color: #75715e"># status bar colors</span>
+<span style="color: #f8f8f2">set</span> <span style="color: #f92672">-</span><span style="color: #f8f8f2">g</span> <span style="color: #f8f8f2">status</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">fg</span> <span style="color: #f8f8f2">white</span> 
+<span style="color: #f8f8f2">set</span> <span style="color: #f92672">-</span><span style="color: #f8f8f2">g</span> <span style="color: #f8f8f2">status</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">bg</span> <span style="color: #f8f8f2">black</span>
 
-<pre><code>::text
-# status bar colors
-set -g status-fg white 
-set -g status-bg black
+<span style="color: #f8f8f2">set</span> <span style="color: #f92672">-</span><span style="color: #f8f8f2">g</span> <span style="color: #f8f8f2">status</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">left</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">length</span> <span style="color: #ae81ff">40</span>
+<span style="color: #f8f8f2">set</span> <span style="color: #f92672">-</span><span style="color: #f8f8f2">g</span> <span style="color: #f8f8f2">status</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">left</span> <span style="color: #e6db74">&quot;#[fg=green][#[fg=yellow]#S #[bg=black,fg=cyan]Win: #[fg=yellow]#I #[fg=cyan]Pane: #[fg=yellow]#P#[fg=green]]&quot;</span>
 
-set -g status-left-length 40
-set -g status-left &quot;#[fg=green][#[fg=yellow]#S #[bg=black,fg=cyan]Win: #[fg=yellow]#I #[fg=cyan]Pane: #[fg=yellow]#P#[fg=green]]&quot;
+<span style="color: #f8f8f2">set</span> <span style="color: #f92672">-</span><span style="color: #f8f8f2">g</span> <span style="color: #f8f8f2">status</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">right</span> <span style="color: #e6db74">&quot;#[fg=green][#[fg=cyan]%d %b %R#[fg=green]]&quot;</span>
 
-set -g status-right &quot;#[fg=green][#[fg=cyan]%d %b %R#[fg=green]]&quot;
-
-## window list options
-setw -g window-status-fg cyan 
-setw -g window-status-bg default 
-setw -g window-status-attr dim
-setw -g window-status-current-fg white 
-setw -g window-status-current-bg red
-setw -g window-status-current-attr bright
-setw -g automatic-rename on
-set-window-option -g window-status-format '#[fg=green][#[fg=cyan,dim]#I#[fg=blue]:#[default]#W#[fg=grey,dim]#F#[fg=green]]'
-set-window-option -g window-status-current-format '#[bg=red,fg=cyan,bold][#I#[bg=red,fg=cyan]:#[fg=colour230]#W#[fg=dim]#F#[bg=red,fg=cyan]]'
-</code></pre>
+<span style="color: #75715e">## window list options</span>
+<span style="color: #f8f8f2">setw</span> <span style="color: #f92672">-</span><span style="color: #f8f8f2">g</span> <span style="color: #f8f8f2">window</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">status</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">fg</span> <span style="color: #f8f8f2">cyan</span> 
+<span style="color: #f8f8f2">setw</span> <span style="color: #f92672">-</span><span style="color: #f8f8f2">g</span> <span style="color: #f8f8f2">window</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">status</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">bg</span> <span style="color: #66d9ef">default</span> 
+<span style="color: #f8f8f2">setw</span> <span style="color: #f92672">-</span><span style="color: #f8f8f2">g</span> <span style="color: #f8f8f2">window</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">status</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">attr</span> <span style="color: #f8f8f2">dim</span>
+<span style="color: #f8f8f2">setw</span> <span style="color: #f92672">-</span><span style="color: #f8f8f2">g</span> <span style="color: #f8f8f2">window</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">status</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">current</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">fg</span> <span style="color: #f8f8f2">white</span> 
+<span style="color: #f8f8f2">setw</span> <span style="color: #f92672">-</span><span style="color: #f8f8f2">g</span> <span style="color: #f8f8f2">window</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">status</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">current</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">bg</span> <span style="color: #f8f8f2">red</span>
+<span style="color: #f8f8f2">setw</span> <span style="color: #f92672">-</span><span style="color: #f8f8f2">g</span> <span style="color: #f8f8f2">window</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">status</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">current</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">attr</span> <span style="color: #f8f8f2">bright</span>
+<span style="color: #f8f8f2">setw</span> <span style="color: #f92672">-</span><span style="color: #f8f8f2">g</span> <span style="color: #f8f8f2">automatic</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">rename</span> <span style="color: #f8f8f2">on</span>
+<span style="color: #f8f8f2">set</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">window</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">option</span> <span style="color: #f92672">-</span><span style="color: #f8f8f2">g</span> <span style="color: #f8f8f2">window</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">status</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">format</span> <span style="color: #960050; background-color: #1e0010">&#39;#</span><span style="color: #f8f8f2">[fg</span><span style="color: #f92672">=</span><span style="color: #f8f8f2">green][</span><span style="color: #960050; background-color: #1e0010">#</span><span style="color: #f8f8f2">[fg</span><span style="color: #f92672">=</span><span style="color: #f8f8f2">cyan,dim]</span><span style="color: #960050; background-color: #1e0010">#</span><span style="color: #f8f8f2">I</span><span style="color: #960050; background-color: #1e0010">#</span><span style="color: #f8f8f2">[fg</span><span style="color: #f92672">=</span><span style="color: #f8f8f2">blue]</span><span style="color: #f92672">:</span><span style="color: #960050; background-color: #1e0010">#</span><span style="color: #f8f8f2">[</span><span style="color: #66d9ef">default</span><span style="color: #f8f8f2">]</span><span style="color: #960050; background-color: #1e0010">#</span><span style="color: #f8f8f2">W</span><span style="color: #960050; background-color: #1e0010">#</span><span style="color: #f8f8f2">[fg</span><span style="color: #f92672">=</span><span style="color: #f8f8f2">grey,dim]</span><span style="color: #960050; background-color: #1e0010">#</span><span style="color: #f8f8f2">F</span><span style="color: #960050; background-color: #1e0010">#</span><span style="color: #f8f8f2">[fg</span><span style="color: #f92672">=</span><span style="color: #f8f8f2">green]]</span><span style="color: #960050; background-color: #1e0010">&#39;</span>
+<span style="color: #f8f8f2">set</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">window</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">option</span> <span style="color: #f92672">-</span><span style="color: #f8f8f2">g</span> <span style="color: #f8f8f2">window</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">status</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">current</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">format</span> <span style="color: #960050; background-color: #1e0010">&#39;#</span><span style="color: #f8f8f2">[bg</span><span style="color: #f92672">=</span><span style="color: #f8f8f2">red,fg</span><span style="color: #f92672">=</span><span style="color: #f8f8f2">cyan,bold][</span><span style="color: #960050; background-color: #1e0010">#</span><span style="color: #f8f8f2">I</span><span style="color: #960050; background-color: #1e0010">#</span><span style="color: #f8f8f2">[bg</span><span style="color: #f92672">=</span><span style="color: #f8f8f2">red,fg</span><span style="color: #f92672">=</span><span style="color: #f8f8f2">cyan]</span><span style="color: #f92672">:</span><span style="color: #960050; background-color: #1e0010">#</span><span style="color: #f8f8f2">[fg</span><span style="color: #f92672">=</span><span style="color: #f8f8f2">colour230]</span><span style="color: #960050; background-color: #1e0010">#</span><span style="color: #f8f8f2">W</span><span style="color: #960050; background-color: #1e0010">#</span><span style="color: #f8f8f2">[fg</span><span style="color: #f92672">=</span><span style="color: #f8f8f2">dim]</span><span style="color: #960050; background-color: #1e0010">#</span><span style="color: #f8f8f2">F</span><span style="color: #960050; background-color: #1e0010">#</span><span style="color: #f8f8f2">[bg</span><span style="color: #f92672">=</span><span style="color: #f8f8f2">red,fg</span><span style="color: #f92672">=</span><span style="color: #f8f8f2">cyan]]</span><span style="color: #960050; background-color: #1e0010">&#39;</span>
+</pre></div>
 
 <p>Above settings will format the status bar at bottom. Below screenshot shows the left side of statusbar.</p>
 
 <p><img src="/blog/img/tmux-left.png" alt="Alt text" /></p>
 
 <p>Above status bar is from a tmux session with name dev.</p>
-
-<pre><code>::bash
-tmux new -s dev
-</code></pre>
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span style="color: #f92672">::</span><span style="color: #f8f8f2">bash</span>
+<span style="color: #f8f8f2">tmux</span> <span style="color: #f8f8f2">new</span> <span style="color: #f92672">-</span><span style="color: #f8f8f2">s</span> <span style="color: #f8f8f2">dev</span>
+</pre></div>
 
 <p>As you can see left side of status bar shows tmux session name, number of windows, number of panes and window list. You can see that window index start from 1 instead of default zero and active window background is red.</p>
 
 <p>Right side of the statusbar is set to show the the date.</p>
-
-<pre><code>::text
-set -g status-right &quot;#[fg=green][#[fg=cyan]%d %b %R#[fg=green]]&quot;
-</code></pre>
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span style="color: #f92672">::</span><span style="color: #f8f8f2">text</span>
+<span style="color: #f8f8f2">set</span> <span style="color: #f92672">-</span><span style="color: #f8f8f2">g</span> <span style="color: #f8f8f2">status</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">right</span> <span style="color: #e6db74">&quot;#[fg=green][#[fg=cyan]%d %b %R#[fg=green]]&quot;</span>
+</pre></div>
 
 <p>Result will look like :</p>
 
