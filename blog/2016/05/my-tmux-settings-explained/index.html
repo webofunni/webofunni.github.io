@@ -1,0 +1,131 @@
+<!doctype html> 
+<html lang="en-us"> 
+<head>
+  <meta charset="utf-8">
+  <title>Unni&#39;s Blog</title>
+  <meta name="author" content="">
+  <meta name="description" content="My online diary">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  
+  <link rel="icon" href="/favicon.png" />
+  <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png" />
+  
+  
+  <link rel="stylesheet" href="/style.css" />
+  
+  
+  
+  <link href='//fonts.googleapis.com/css?family=Merriweather:400,700' rel='stylesheet' type='text/css'>
+  
+
+</head>
+
+<body class="">
+
+  
+
+  <div class="wrap">
+    <header class="mb">
+      <h1 class="h2 m-0"><a href="/">Unni&#39;s Blog</a></h1>
+      <p class="site-description">My online diary</p>
+    </header>
+
+
+<main>
+<article class="post">
+  <h1><a href="http://www.unni.pw/blog/2016/05/my-tmux-settings-explained/" title="My tmux settings explained">My tmux settings explained</a></h1>
+  <p>I am using tmux for almost 2 years now. I was using and was a big fan of screen before that. But screen was replaced by tmux from the moment one of my colleague introduced me to a more actively developed tmux.</p>
+
+<p>Here I am documenting my Tmux configuration. Full configuration file is stored at <a href="https://github.com/webofunni/dotfiles/blob/master/tmux/tmux.conf">Github</a></p>
+
+<pre><code>::text
+#Use screen key combination
+unbind C-b
+set -g prefix C-a
+bind C-a send-prefix
+</code></pre>
+
+<p>Above settings will replace default prefix for tmux from <code>Ctrl+b</code> or <code>CMD+b</code> to <code>Ctrl+a</code> or <code>CMD+a</code>. It also binds <code>Ctrl+a+Ctrl+a</code> or <code>CMD+a+CMD+a</code> to send prefix to multiplexer running under tmux such as screen.</p>
+
+<pre><code>::text
+#Some easy key combination to Split window
+bind | split-window -h
+bind - split-window -v
+</code></pre>
+
+<p>Now its time to change the keyboard short cut to <code>Prefix + |</code> for vertical split and <code>Prefix + -</code> for horizontal split.</p>
+
+<pre><code>::text
+#Easily reload configuration
+bind r source-file ~/.tmux.conf \; display &quot;Reloaded!!!&quot;
+</code></pre>
+
+<p>Easily reload the configuration file using <code>Prefix+r</code></p>
+
+<pre><code>::text
+#Change starting window index to 1 from 0
+set -g base-index 1
+
+#Monitor activity in windows
+setw -g monitor-activity on 
+set -g visual-activity on
+</code></pre>
+
+<p>Change the window index from 0 to 1 and keep monitor activity on each window.</p>
+
+<pre><code>::text
+# status bar colors
+set -g status-fg white 
+set -g status-bg black
+
+set -g status-left-length 40
+set -g status-left &quot;#[fg=green][#[fg=yellow]#S #[bg=black,fg=cyan]Win: #[fg=yellow]#I #[fg=cyan]Pane: #[fg=yellow]#P#[fg=green]]&quot;
+
+set -g status-right &quot;#[fg=green][#[fg=cyan]%d %b %R#[fg=green]]&quot;
+
+## window list options
+setw -g window-status-fg cyan 
+setw -g window-status-bg default 
+setw -g window-status-attr dim
+setw -g window-status-current-fg white 
+setw -g window-status-current-bg red
+setw -g window-status-current-attr bright
+setw -g automatic-rename on
+set-window-option -g window-status-format '#[fg=green][#[fg=cyan,dim]#I#[fg=blue]:#[default]#W#[fg=grey,dim]#F#[fg=green]]'
+set-window-option -g window-status-current-format '#[bg=red,fg=cyan,bold][#I#[bg=red,fg=cyan]:#[fg=colour230]#W#[fg=dim]#F#[bg=red,fg=cyan]]'
+</code></pre>
+
+<p>Above settings will format the status bar at bottom. Below screenshot shows the left side of statusbar.</p>
+
+<p><img src="/blog/img/tmux-left.png" alt="Alt text" /></p>
+
+<p>Above status bar is from a tmux session with name dev.</p>
+
+<pre><code>::bash
+tmux new -s dev
+</code></pre>
+
+<p>As you can see left side of status bar shows tmux session name, number of windows, number of panes and window list. You can see that window index start from 1 instead of default zero and active window background is red.</p>
+
+<p>Right side of the statusbar is set to show the the date.</p>
+
+<pre><code>::text
+set -g status-right &quot;#[fg=green][#[fg=cyan]%d %b %R#[fg=green]]&quot;
+</code></pre>
+
+<p>Result will look like :</p>
+
+<p><img src="/blog/img/tmux-right.png" alt="Alt status bar right" /></p>
+
+<p>Thats all about my Tmux settings :)</p>
+
+  <p class="small gray"><time datetime="2016-05-31">May 31, 2016</time></p>
+</article>
+</main>
+</div>
+
+
+
+</body>
+</html>

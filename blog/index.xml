@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Unni&#39;s Blog</title>
+    <link>http://www.unni.pw/blog/</link>
+    <description>Recent content on Unni&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 31 May 2016 22:03:10 +0530</lastBuildDate>
+    <atom:link href="http://www.unni.pw/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>My tmux settings explained</title>
+      <link>http://www.unni.pw/blog/2016/05/my-tmux-settings-explained/</link>
+      <pubDate>Tue, 31 May 2016 22:03:10 +0530</pubDate>
+      
+      <guid>http://www.unni.pw/blog/2016/05/my-tmux-settings-explained/</guid>
+      <description>&lt;p&gt;I am using tmux for almost 2 years now. I was using and was a big fan of screen before that. But screen was replaced by tmux from the moment one of my colleague introduced me to a more actively developed tmux.&lt;/p&gt;
+
+&lt;p&gt;Here I am documenting my Tmux configuration. Full configuration file is stored at &lt;a href=&#34;https://github.com/webofunni/dotfiles/blob/master/tmux/tmux.conf&#34;&gt;Github&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;::text
+#Use screen key combination
+unbind C-b
+set -g prefix C-a
+bind C-a send-prefix
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Above settings will replace default prefix for tmux from &lt;code&gt;Ctrl+b&lt;/code&gt; or &lt;code&gt;CMD+b&lt;/code&gt; to &lt;code&gt;Ctrl+a&lt;/code&gt; or &lt;code&gt;CMD+a&lt;/code&gt;. It also binds &lt;code&gt;Ctrl+a+Ctrl+a&lt;/code&gt; or &lt;code&gt;CMD+a+CMD+a&lt;/code&gt; to send prefix to multiplexer running under tmux such as screen.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;::text
+#Some easy key combination to Split window
+bind | split-window -h
+bind - split-window -v
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now its time to change the keyboard short cut to &lt;code&gt;Prefix + |&lt;/code&gt; for vertical split and &lt;code&gt;Prefix + -&lt;/code&gt; for horizontal split.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;::text
+#Easily reload configuration
+bind r source-file ~/.tmux.conf \; display &amp;quot;Reloaded!!!&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Easily reload the configuration file using &lt;code&gt;Prefix+r&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;::text
+#Change starting window index to 1 from 0
+set -g base-index 1
+
+#Monitor activity in windows
+setw -g monitor-activity on 
+set -g visual-activity on
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Change the window index from 0 to 1 and keep monitor activity on each window.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;::text
+# status bar colors
+set -g status-fg white 
+set -g status-bg black
+
+set -g status-left-length 40
+set -g status-left &amp;quot;#[fg=green][#[fg=yellow]#S #[bg=black,fg=cyan]Win: #[fg=yellow]#I #[fg=cyan]Pane: #[fg=yellow]#P#[fg=green]]&amp;quot;
+
+set -g status-right &amp;quot;#[fg=green][#[fg=cyan]%d %b %R#[fg=green]]&amp;quot;
+
+## window list options
+setw -g window-status-fg cyan 
+setw -g window-status-bg default 
+setw -g window-status-attr dim
+setw -g window-status-current-fg white 
+setw -g window-status-current-bg red
+setw -g window-status-current-attr bright
+setw -g automatic-rename on
+set-window-option -g window-status-format &#39;#[fg=green][#[fg=cyan,dim]#I#[fg=blue]:#[default]#W#[fg=grey,dim]#F#[fg=green]]&#39;
+set-window-option -g window-status-current-format &#39;#[bg=red,fg=cyan,bold][#I#[bg=red,fg=cyan]:#[fg=colour230]#W#[fg=dim]#F#[bg=red,fg=cyan]]&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Above settings will format the status bar at bottom. Below screenshot shows the left side of statusbar.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.unni.pw/blog/blog/img/tmux-left.png&#34; alt=&#34;Alt text&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Above status bar is from a tmux session with name dev.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;::bash
+tmux new -s dev
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;As you can see left side of status bar shows tmux session name, number of windows, number of panes and window list. You can see that window index start from 1 instead of default zero and active window background is red.&lt;/p&gt;
+
+&lt;p&gt;Right side of the statusbar is set to show the the date.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;::text
+set -g status-right &amp;quot;#[fg=green][#[fg=cyan]%d %b %R#[fg=green]]&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Result will look like :&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.unni.pw/blog/blog/img/tmux-right.png&#34; alt=&#34;Alt status bar right&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Thats all about my Tmux settings :)&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
