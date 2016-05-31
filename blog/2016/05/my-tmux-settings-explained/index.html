@@ -1,56 +1,87 @@
-<!doctype html> 
-<html lang="en-us"> 
-<head>
-  <meta charset="utf-8">
-  <title>Unni&#39;s Blog</title>
-  <meta name="author" content="">
-  <meta name="description" content="My online diary">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  
-  <link rel="icon" href="/favicon.png" />
-  <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png" />
-  
-  
-  <link rel="stylesheet" href="/blog/style.css" />
-  
-  
-  
-  <link href='//fonts.googleapis.com/css?family=Merriweather:400,700' rel='stylesheet' type='text/css'>
-  
-  <link rel="stylesheet" href="https://yandex.st/highlightjs/8.0/styles/default.min.css">
-<style type='text/css'>
-    pre, code {
-	            white-space: pre;
-		    overflow-x: scroll;
-    }
-        .hljs {
-		display: inline-block;
-		overflow-x: scroll;
-		padding: 0.5em;
-		padding-right: 100%;
-		-webkit-text-size-adjust: none;
-	}
-</style>
-  <script src="https://yandex.st/highlightjs/8.0/highlight.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script>
-</head>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="generator" content="Hugo 0.15" />
 
-<body class="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Open+Sans|Lobster'>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/solarized_dark.min.css">
+    <link rel="stylesheet" href="http://www.unni.pw/blog/css/styles.css">
+    <link rel="stylesheet" href="http://www.unni.pw/blog/css/custom.css">
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.unni.pw/blog//index.xml">
 
-  
+    
+    <title>My tmux settings explained - Unni&#39;s Blog</title>
+    <meta property='og:title' content="My tmux settings explained - Unni&#39;s Blog">
+    <meta property="og:type" content="article">
+    
 
-  <div class="wrap">
-    <header class="mb">
-      <h1 class="h2 m-0"><a href="/blog/">Unni&#39;s Blog</a></h1>
-      <p class="site-description">My online diary</p>
+    <meta property="og:url" content="http://www.unni.pw/blog/2016/05/my-tmux-settings-explained/">
+    
+    
+
+  </head>
+
+  <body>
+
+    <div class="container">
+      <header class="site">
+        <div class="title"><a href="http://www.unni.pw/blog/">Unni&#39;s Blog</a></div>
+      </header>
+    </div>
+
+    <div class="container site">
+
+
+<div class="single">
+  <article class="single" itemscope="itemscope" itemtype="http://schema.org/Article">
+
+    <meta itemprop="mainEntityOfPage"  itemType="https://schema.org/WebPage" content="http://www.unni.pw/blog/"/>
+    <meta itemprop="dateModified" content="2016-05-31T22:03:10&#43;05:30">
+    <meta itemprop="headline" content="My tmux settings explained">
+    <meta itemprop="description" content="I am using tmux for almost 2 years now. I was using and was a big fan of screen before that. But screen was replaced by tmux from the moment one of my colleague introduced me to a more actively developed tmux. Here I am documenting my Tmux configuration. Full configuration file is stored at Github #Use screen key combination unbind C-b set -g prefix C-a bind C-a send-prefix Above settings will replace default prefix for tmux from Ctrl&#43;b or CMD&#43;b to Ctrl&#43;a or CMD&#43;a.">
+    <meta itemprop="url" content="http://www.unni.pw/blog/2016/05/my-tmux-settings-explained/">
+    <div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+      <meta itemprop="url" content="http://www.unni.pw/blog/images/default.jpg" />
+      <meta itemprop="width" content="800">
+      <meta itemprop="height" content="800">
+    </div>
+    <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+      <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+        <meta itemprop="url" content="http://www.unni.pw/blog/images/logo.jpg">
+        <meta itemprop="width" content="100">
+        <meta itemprop="height" content="100">
+      </div>
+      <meta itemprop="name" content="Unni&#39;s Blog">
+    </div>
+    <div itemprop="author" itemscope itemtype="https://schema.org/Person">
+      <meta itemprop="name" content="">
+    </div>
+
+    <header class="clearfix">
+      <div class="pull-left">
+        <div class="image" style="background-image: url(http://www.unni.pw/blog/images/default.jpg);"></div>
+      </div>
+
+      <div class="detail">
+        <time>Tue, May 31, 2016</time>
+        <h1 class="title">My tmux settings explained</h1>
+      </div>
     </header>
 
+    <div class="share">
+      <a href="http://www.facebook.com/sharer.php?src=bm&u=http%3a%2f%2fwww.unni.pw%2fblog%2f2016%2f05%2fmy-tmux-settings-explained%2f&t=My%20tmux%20settings%20explained" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-facebook"></i></a>
+      <a href="http://twitter.com/intent/tweet?url=http%3a%2f%2fwww.unni.pw%2fblog%2f2016%2f05%2fmy-tmux-settings-explained%2f&text=My%20tmux%20settings%20explained&tw_p=tweetbutton" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-twitter"></i></a>
+      <a href="https://plus.google.com/share?url=http%3a%2f%2fwww.unni.pw%2fblog%2f2016%2f05%2fmy-tmux-settings-explained%2f" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-google-plus"></i></a>
+      <a href="http://getpocket.com/edit?url=http%3a%2f%2fwww.unni.pw%2fblog%2f2016%2f05%2fmy-tmux-settings-explained%2f&title=My%20tmux%20settings%20explained" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-get-pocket"></i></a>
+    </div>
 
-<main>
-<article class="post">
-  <h1><a href="http://www.unni.pw/blog/2016/05/my-tmux-settings-explained/" title="My tmux settings explained">My tmux settings explained</a></h1>
-  <p>I am using tmux for almost 2 years now. I was using and was a big fan of screen before that. But screen was replaced by tmux from the moment one of my colleague introduced me to a more actively developed tmux.</p>
+    
+
+    <div class="article-body" itemprop="articleBody"><p>I am using tmux for almost 2 years now. I was using and was a big fan of screen before that. But screen was replaced by tmux from the moment one of my colleague introduced me to a more actively developed tmux.</p>
 
 <p>Here I am documenting my Tmux configuration. Full configuration file is stored at <a href="https://github.com/webofunni/dotfiles/blob/master/tmux/tmux.conf">Github</a></p>
 
@@ -129,13 +160,50 @@ set -g status-right &quot;#[fg=green][#[fg=cyan]%d %b %R#[fg=green]]&quot;
 <p><img src="/blog/img/tmux-right.png" alt="Alt status bar right" /></p>
 
 <p>Thats all about my Tmux settings :)</p>
-
-  <p class="small gray"><time datetime="2016-05-31">May 31, 2016</time></p>
-</article>
-</main>
 </div>
 
+    <aside>
 
+      
 
-</body>
+      
+      
+      <div id="disqus_thread"></div>
+      <script type="text/javascript">
+
+(function() {
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  var disqus_shortname = 'unnisblog';
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      <a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      
+      
+
+    </aside>
+
+  </article>
+</div>
+
+    </div>
+
+    <div class="container">
+      <footer class="site">
+        <p>&copy; 2016 Unni&#39;s Blog</p>
+        <p>Powered by <a href="http://gohugo.io" target="_blank" rel="nofollow">Hugo</a>, Theme <a href="https://github.com/dim0627/hugo_theme_aglaus" target="_blank" rel="nofollow">aglaus</a> designed by <a href="http://yet.unresolved.xyz" target="_blank" rel="nofollow">Daisuke Tsuji</a></p>
+      </footer>
+    </div>
+
+    <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    
+
+  </body>
 </html>
+
