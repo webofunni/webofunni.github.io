@@ -41,7 +41,7 @@
 
 <p>Here I am documenting my Tmux configuration. Full configuration file is stored at <a href="https://github.com/webofunni/dotfiles/blob/master/tmux/tmux.conf">Github</a></p>
 
-<pre><code class="language-bash">#Use screen key combination
+<pre><code class="language-Bash">#Use screen key combination
 unbind C-b
 set -g prefix C-a
 bind C-a send-prefix
@@ -49,24 +49,20 @@ bind C-a send-prefix
 
 <p>Above settings will replace default prefix for tmux from <code>Ctrl+b</code> or <code>CMD+b</code> to <code>Ctrl+a</code> or <code>CMD+a</code>. It also binds <code>Ctrl+a+Ctrl+a</code> or <code>CMD+a+CMD+a</code> to send prefix to multiplexer running under tmux such as screen.</p>
 
-<pre><code>```text
-#Some easy key combination to Split window
+<pre><code class="language-Bash">#Some easy key combination to Split window
 bind | split-window -h
 bind - split-window -v
 </code></pre>
 
-<p>``<code>
-Now its time to change the keyboard short cut to</code>Prefix + |<code>for vertical split and</code>Prefix + -` for horizontal split.</p>
+<p>Now its time to change the keyboard short cut to <code>Prefix + |</code> for vertical split and <code>Prefix + -</code> for horizontal split.</p>
 
-<pre><code>::text
-#Easily reload configuration
+<pre><code class="language-Bash">#Easily reload configuration
 bind r source-file ~/.tmux.conf \; display &quot;Reloaded!!!&quot;
 </code></pre>
 
 <p>Easily reload the configuration file using <code>Prefix+r</code></p>
 
-<pre><code>::text
-#Change starting window index to 1 from 0
+<pre><code class="language-Bash">#Change starting window index to 1 from 0
 set -g base-index 1
 
 #Monitor activity in windows
@@ -76,8 +72,7 @@ set -g visual-activity on
 
 <p>Change the window index from 0 to 1 and keep monitor activity on each window.</p>
 
-<pre><code>::text
-# status bar colors
+<pre><code class="language-Bash"># status bar colors
 set -g status-fg white 
 set -g status-bg black
 
