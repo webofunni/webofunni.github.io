@@ -112,16 +112,14 @@ set-window-option -g window-status-current-format '#[bg=red,fg=cyan,bold][#I#[bg
 
 <p>Above status bar is from a tmux session with name dev.</p>
 
-<pre><code>::bash
-tmux new -s dev
+<pre><code class="language-Bash">tmux new -s dev
 </code></pre>
 
 <p>As you can see left side of status bar shows tmux session name, number of windows, number of panes and window list. You can see that window index start from 1 instead of default zero and active window background is red.</p>
 
 <p>Right side of the statusbar is set to show the the date.</p>
 
-<pre><code>::text
-set -g status-right &quot;#[fg=green][#[fg=cyan]%d %b %R#[fg=green]]&quot;
+<pre><code class="language-Bash">set -g status-right &quot;#[fg=green][#[fg=cyan]%d %b %R#[fg=green]]&quot;
 </code></pre>
 
 <p>Result will look like :</p>
