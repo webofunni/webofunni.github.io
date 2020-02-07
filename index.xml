@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Unni</title>
-    <link>http://unni.pw/</link>
+    <link>https://unni.pw/</link>
     <description>Recent content on Unni</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Wed, 05 Feb 2020 22:19:00 +0530</lastBuildDate>
     
-	<atom:link href="http://unni.pw/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://unni.pw/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>About</title>
-      <link>http://unni.pw/about/</link>
+      <link>https://unni.pw/about/</link>
       <pubDate>Wed, 05 Feb 2020 22:19:00 +0530</pubDate>
       
-      <guid>http://unni.pw/about/</guid>
+      <guid>https://unni.pw/about/</guid>
       <description>About me!!!! :-)</description>
     </item>
     
     <item>
       <title>My tmux settings explained</title>
-      <link>http://unni.pw/posts/my-tmux-settings-explained/</link>
+      <link>https://unni.pw/posts/my-tmux-settings-explained/</link>
       <pubDate>Wed, 05 Feb 2020 15:16:41 +0530</pubDate>
       
-      <guid>http://unni.pw/posts/my-tmux-settings-explained/</guid>
+      <guid>https://unni.pw/posts/my-tmux-settings-explained/</guid>
       <description>I am using tmux for almost 2 years now. I was using and was a big fan of screen before that. But screen was replaced by tmux from the moment one of my colleague introduced me to a more actively developed tmux.
 Here I am documenting my Tmux configuration. Full configuration file is stored at Github
 #Use screen key combination unbind C-b set -g prefix C-a bind C-a send-prefix Above settings will replace default prefix for tmux from Ctrl+b or CMD+b to Ctrl+a or CMD+a.</description>
