@@ -3,15 +3,31 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://www.unni.pw/about/</loc>
+    <lastmod>2020-02-05T22:19:00+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.unni.pw/</loc>
+    <lastmod>2020-02-05T22:19:00+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.unni.pw/posts/my-tmux-settings-explained/</loc>
+    <lastmod>2020-02-05T15:16:41+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.unni.pw/posts/</loc>
+    <lastmod>2020-02-05T15:16:41+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>http://www.unni.pw/categories/</loc>
   </url>
   
   <url>
     <loc>http://www.unni.pw/tags/</loc>
-  </url>
-  
-  <url>
-    <loc>http://www.unni.pw/</loc>
   </url>
   
 </urlset>
