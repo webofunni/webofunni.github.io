@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Unni</title>
-    <link>www.unni.pw/tags/</link>
+    <link>http://www.unni.pw/tags/</link>
     <description>Recent content in Tags on Unni</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     
-	<atom:link href="www.unni.pw/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://www.unni.pw/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>
